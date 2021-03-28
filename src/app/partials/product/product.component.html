@@ -1,0 +1,132 @@
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg5.jpg') ;">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <br><br>
+                <br><br>
+                <br><br>
+                <h1 class="title">Londres</h1>
+                <button class="btn btn-primary btn-round btn-lg" type="button">
+                    Total de Milhas: 50.000
+                </button>
+                <br>
+                <br>
+                <div class="progress-container progress-primary">
+                    <span class="progress-badge">Status</span>
+                    <ngb-progressbar [value]="60"><span class="progress-value">30.000 Milhas</span></ngb-progressbar><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <ngb-carousel>
+                        <ng-template ngbSlide>
+                            <img class="d-block" src="assets/img/BigBen.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Big Ben</h3>
+                                <h5> Londres</h5>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="d-block" src="assets/img/TowerBridge.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Tower Bridge</h3>
+                                <h5> Londres</h5>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="d-block" src="assets/img/LondonEye.png" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>London Eye</h3>
+                                <h5> Londres</h5>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+            <h3 class="title">Plano econômico</h3>
+            <div class="card">
+                <div class="nav-tabs-navigation" data-tabs-color="orange">
+                    <div class="nav-tabs-wrapper">
+                        <ngb-tabset [justify]="'center'" class="text-center">
+                            <ngb-tab title="Dados gerais">
+                                <ng-template ngbTabContent>
+
+                                    <div class="container">
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="category">Depositar valor</p>
+                                                <div class="text-center">
+                                                    <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="now-ui-icons business_money-coins"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control" (focus)="focus=true" (blur)="focus=false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="category">Data prevista</p>
+                                                <div class="text-center">
+                                                    <div class="datepicker-container">
+                                                        <div class="form-group">
+                                                            <input class="form-control datetimepicker" placeholder="06/07/2017" name="dp" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" data-color="orange">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="category">Poupar por mês</p>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p class="category">Valor</p>
+                                                        <div class="text-center">
+                                                            <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="now-ui-icons business_money-coins"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="text" class="form-control" (focus)="focus=true" (blur)="focus=false">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="category">Data de debito</p>
+                                                        <div class="text-center">
+                                                            <div class="datepicker-container">
+                                                                <div class="form-group">
+                                                                    <input class="form-control datetimepicker" placeholder="06/07/2017" name="dp" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" data-color="orange">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="category">Debito automático</p>
+                                                        <div class="typography-line" class="text-center">
+                                                            <bSwitch> Toggle is off
+                                                            </bSwitch>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
+                        </ngb-tabset>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

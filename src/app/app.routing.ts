@@ -9,7 +9,7 @@ import { LoginComponent } from './partials/login/login.component';
 import { ProfileComponent } from './partials/profile/profile.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { RegisterComponent } from './partials/register/register.component';
-import { RegisterWishComponent } from './partials/register-wish/register-wish.component';
+import { ProductComponent } from './partials/product/product.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +18,7 @@ const routes: Routes =[
     { path: 'login',       component: LoginComponent },
     { path: 'profile',     component: ProfileComponent },
     { path: 'register',     component: RegisterComponent },
-    { path: 'registerWish',     component: RegisterWishComponent }
+    { path: 'product',     component: ProductComponent }
 ];
 
 @NgModule({

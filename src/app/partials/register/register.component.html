@@ -5,94 +5,161 @@
             <div>
                 <h2 class="h1-seo">Cadastro</h2>
                 <form class="form" method="" action="">
-                    <p class="category">Dados de login</p>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+
+                    <div *ngIf="(page == 0)">
+                        <p class="category">Dados de login</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Nome" (focus)="focus=true" (blur)="focus=false">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Nome" (focus)="focus=true" (blur)="focus=false">
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons objects_key-25"></i></span>
+                            <div class="col-md-6">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons objects_key-25"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Senha" (focus)="focus=true" (blur)="focus=false">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Senha" (focus)="focus=true" (blur)="focus=false">
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons objects_key-25"></i></span>
+                            <div class="col-md-6">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons objects_key-25"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Repetir Senha" (focus)="focus=true" (blur)="focus=false">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Repetir Senha" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <p class="category">Dados pessoais</p>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Idade" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Telefone" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="CPF" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons ui-1_email-85"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Sexo" (focus)="focus=true" (blur)="focus=false">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">  <i class="now-ui-icons location_pin"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Endereço" (focus)="focus=true" (blur)="focus=false">
                             </div>
                         </div>
                     </div>
+
+                    <div *ngIf="(page == 1)">
+                        <br>
+                        <p class="category">Dados pessoais</p>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Idade" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Telefone" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="CPF" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons ui-1_email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Sexo" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <i class="now-ui-icons location_pin"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Endereço" (focus)="focus=true" (blur)="focus=false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="(page == 2)">
+                        <br>
+                        <p class="category">Personalização</p>
+                        <br>
+                        <div ngbDropdown class="dropdown">
+                            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+                                Temas de interesse
+                            </a>
+                            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header">Principais</div>
+                                <a class="dropdown-item">Futebol</a>
+                                <a class="dropdown-item">Romance</a>
+                                <a class="dropdown-item">Aventura</a>
+                                <a class="dropdown-item">Livros</a>
+                                <a class="dropdown-item">Desenhos</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item">Reality show</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item">Animais</a>
+                                <a class="dropdown-item">Acampar</a>
+                                <a class="dropdown-item">Praia</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div ngbDropdown class="dropdown">
+                            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+                                Viagens desejadas
+                            </a>
+                            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header">Internacional</div>
+                                <a class="dropdown-item">New York</a>
+                                <a class="dropdown-item">Londres</a>
+                                <a class="dropdown-item">Paris</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-header">Nacional</div>
+                                <a class="dropdown-item">São Paulo</a>
+                                <a class="dropdown-item">Rio de Janeiro</a>
+                                <a class="dropdown-item">Curitiba</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div ngbDropdown class="dropdown">
+                            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+                                Produtos desejados
+                            </a>
+                            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header">Eletronicos</div>
+                                <a class="dropdown-item">Iphone</a>
+                                <a class="dropdown-item">Mac</a>
+                                <a class="dropdown-item">Mac Air</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item">Apple Watch</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item">Apple Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="footer text-center">
                         <div class="row">
                             <div class="col-md-4">
+                                <a class="btn btn-primary btn-round btn-lg btn-block" (click)="backPage()"><i class="now-ui-icons arrows-1_minimal-left"></i> Voltar</a>
                             </div>
                             <div class="col-md-4">
                             </div>
                             <div class="col-md-4">
-                                <a class="btn btn-primary btn-round btn-lg btn-block" [routerLink]="['/']">next <i class="now-ui-icons arrows-1_minimal-right"></i></a>
+                                <a *ngIf="(page != 2)" class="btn btn-primary btn-round btn-lg btn-block" (click)="nextPage()">Avançar <i class="now-ui-icons arrows-1_minimal-right"></i></a>
+                                <a *ngIf="(page == 2)" class="btn btn-primary btn-round btn-lg btn-block" [routerLink]="['/home']">Finalizar</a>
                             </div>
                         </div>
                     </div>

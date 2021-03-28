@@ -11,7 +11,21 @@ export class RegisterComponent implements OnInit {
     focus;
     focus1;
 
+    page = 0;
+
     constructor() { }
+
+    nextPage(){
+        if(this.page < 2){
+            this.page = this.page + 1;
+        }
+    }
+
+    backPage(){
+        if(this.page > 0){
+            this.page = this.page - 1;
+        }
+    }
 
     ngOnInit() {
         var body = document.getElementsByTagName('body')[0];

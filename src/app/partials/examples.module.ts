@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { ProductComponent } from './product/product.component';
 import { ExamplesComponent } from './examples.component';
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ExamplesComponent } from './examples.component';
         LandingComponent,
         LoginComponent,
         ExamplesComponent,
-        ProfileComponent
+        ProfileComponent,
+        RegisterComponent,
+        ProductComponent
     ]
 })
 export class ExamplesModule { }
